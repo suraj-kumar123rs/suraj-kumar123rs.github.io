@@ -108,8 +108,8 @@
     <!-- STATS -->
     <section class="stats">
       <div class="stat reveal"><b class="count" data-to="0.825" data-dec="3">0</b><span>Macro F1 · audio genre classifier (Kaggle LB)</span></div>
-      <div class="stat reveal"><b class="count" data-to="3">0</b><span>Live deployments · HF Spaces, Streamlit, Netlify</span></div>
-      <div class="stat reveal"><b class="count" data-to="5">0</b><span>Shipped ML &amp; full-stack projects</span></div>
+      <div class="stat reveal"><b class="count" data-to="4">0</b><span>Live deployments · HF Spaces, Streamlit, Netlify, Render</span></div>
+      <div class="stat reveal"><b class="count" data-to="6">0</b><span>Shipped ML &amp; full-stack projects</span></div>
       <div class="stat reveal"><b class="count" data-to="7.3" data-dec="1">0</b><span>CGPA · BS Data Science, IIT Madras</span></div>
     </section>
 
@@ -281,12 +281,34 @@
             <p class="p-sub">IIT Madras MAD II project</p>
             <ul>
               <li>Vue SPA with real-time slot reservation/release, admin revenue analytics, per-lot occupancy charts, and role-based access via Flask-JWT-Extended.</li>
-              <li>Celery + Redis background jobs for daily reminders, monthly reports and CSV export; Dockerised backend.</li>
+              <li>Celery + Redis background jobs for daily reminders, monthly reports and CSV export; Vue frontend on Netlify, Flask backend on PythonAnywhere.</li>
             </ul>
-            <div class="stack"><span>Vue.js</span><span>Flask</span><span>JWT</span><span>Celery</span><span>Redis</span><span>Docker</span></div>
+            <div class="stack"><span>Vue.js</span><span>Flask</span><span>JWT</span><span>Celery</span><span>Redis</span><span>PythonAnywhere</span></div>
             <div class="p-links">
               <a href="https://vehiclepark-ease.netlify.app/" target="_blank" rel="noopener" class="lnk lnk-live">Live Demo ↗</a>
               <a href="https://github.com/suraj-kumar123rs/Vehicle_parking_V2" target="_blank" rel="noopener" class="lnk">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Placement Portal -->
+        <article class="project glass reveal tilt" data-cat="web">
+          <div class="p-visual viz-flow" aria-hidden="true">
+            <div class="flow"><span>Applied</span><b></b><span>Shortlisted</span><b></b><span>Selected</span></div>
+            <div class="p-metric"><b>LIVE</b><span>on Render</span></div>
+          </div>
+          <div class="p-body">
+            <div class="p-meta"><span class="tag tag-web">Full-Stack Web App</span><span class="p-date">2026</span></div>
+            <h3>Placement Portal Application</h3>
+            <p class="p-sub">Three roles: Admin, Company, Student</p>
+            <ul>
+              <li>Company and drive approval workflow, eligibility-filtered drive listings (branch/CGPA), application tracking from Applied to Selected/Rejected, and admin blacklisting.</li>
+              <li>Single Flask app serving a Vue 3 frontend over JSON APIs with session auth and hashed passwords; deployed on Render with auto-seeded demo data and one-click role logins.</li>
+            </ul>
+            <div class="stack"><span>Flask</span><span>SQLAlchemy</span><span>Vue 3</span><span>Bootstrap 5</span><span>SQLite</span><span>Render</span></div>
+            <div class="p-links">
+              <a href="https://placement-portal-hf0y.onrender.com/" target="_blank" rel="noopener" class="lnk lnk-live">Live Demo ↗</a>
+              <a href="https://github.com/suraj-kumar123rs/placement-portal" target="_blank" rel="noopener" class="lnk">GitHub ↗</a>
             </div>
           </div>
         </article>
