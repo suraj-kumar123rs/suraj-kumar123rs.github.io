@@ -251,7 +251,7 @@
         <!-- Comment category -->
         <article class="project glass reveal tilt" data-cat="ml">
           <div class="p-visual viz-bars" aria-hidden="true">
-            <div class="bars"><i style="--h:79%"><em>LR</em></i><i style="--h:74%"><em>XGB</em></i><i style="--h:77%"><em>SVM</em></i><i class="win" style="--h:92%"><em>Blend</em></i></div>
+            <div class="bars"><i style="--h:79%"><em>LR</em></i><i style="--h:76%"><em>XGB</em></i><i style="--h:42%"><em>SVM</em></i><i class="win" style="--h:92%"><em>Blend</em></i></div>
             <div class="p-metric"><b>0.816</b><span>LB macro F1</span></div>
           </div>
           <div class="p-body">
@@ -259,12 +259,12 @@
             <h3>Comment Category Prediction</h3>
             <p class="p-sub">IIT Madras ML Kaggle competition</p>
             <ul>
-              <li>4-class comment classifier: text cleaning, EDA, TF-IDF (1–2 grams, 30k vocab), balanced class weights, grid-searched Logistic Regression.</li>
+              <li>4-class classifier on 198k comments with heavy class imbalance (rarest class under 3%): TF-IDF (1–2 grams, 30k features) combined with one-hot categorical and scaled engagement features, balanced class weights.</li>
               <li>Probability-averaged LR + XGBoost + Linear SVM lifted validation macro F1 from ~0.79 to <b>0.819</b>; <b>0.816</b> on the leaderboard.</li>
             </ul>
             <div class="stack"><span>Python</span><span>Scikit-learn</span><span>XGBoost</span><span>Pandas</span><span>NLP</span></div>
             <div class="p-links">
-              <a href="https://www.kaggle.com/competitions/comment-category-prediction-challenge" target="_blank" rel="noopener" class="lnk lnk-live">Kaggle ↗</a>
+              <a href="https://github.com/suraj-kumar123rs/ML-comment-category-prediction" target="_blank" rel="noopener" class="lnk">GitHub ↗</a>
             </div>
           </div>
         </article>
