@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suraj Kumar · AI/ML Engineer</title>
+  <meta name="description" content="Suraj Kumar — Data Science student at IIT Madras building deep learning, NLP and RAG systems. Open to AI/ML internships." />
+  <meta name="author" content="Suraj Kumar" />
+  <meta property="og:title" content="Suraj Kumar · AI/ML Engineer" />
+  <meta property="og:description" content="Deep learning, NLP, RAG and full-stack projects by Suraj Kumar (IIT Madras)." />
+  <meta property="og:image" content="assets/profile.jpg" />
+  <meta name="theme-color" content="#05060d" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%2305060d'/><text x='50%' y='56%' text-anchor='middle' dominant-baseline='middle' font-family='monospace' font-weight='700' font-size='30' fill='%2322d3ee'>SK</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Boot loader -->
+  <div id="loader" aria-hidden="true">
+    <div class="boot">
+      <p class="boot-line"><span class="c-acc">$</span> boot suraj.ai</p>
+      <p class="boot-line" id="bootStatus">loading neural weights<span class="dots"></span></p>
+      <div class="boot-bar"><span id="bootFill"></span></div>
+    </div>
+  </div>
+
+  <canvas id="bg"></canvas>
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Nav -->
+  <header class="nav" id="nav">
+    <a href="#home" class="logo"><span class="logo-bracket">&lt;</span>SK<span class="logo-bracket">/&gt;</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#journey">Journey</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="resume-menu">
+      <button class="btn btn-small btn-ghost" id="navResumeBtn" aria-haspopup="true" aria-expanded="false">Resume ↓</button>
+      <div class="dropdown" role="menu">
+        <a href="assets/Suraj_Kumar_Resume_AI_ML.pdf" target="_blank" rel="noopener">AI / ML Resume</a>
+        <a href="assets/Suraj_Kumar_Resume_FullStack.pdf" target="_blank" rel="noopener">Full-Stack Resume</a>
+      </div>
+    </div>
+    <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span></button>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <div class="status-chip reveal"><span class="pulse"></span> Open to AI/ML internships</div>
+        <p class="hello reveal">Hi, I'm</p>
+        <h1 class="name reveal" data-text="Suraj Kumar">Suraj Kumar</h1>
+        <h2 class="role reveal"><span class="c-dim">&gt;</span> <span id="typed"></span><span class="caret">_</span></h2>
+        <p class="tagline reveal">
+          Data Science student at <strong>IIT Madras</strong> who builds and ships ML systems — from fine-tuned
+          audio transformers to RAG chatbots — and the full-stack apps around them.
+        </p>
+        <div class="hero-cta reveal">
+          <a href="#projects" class="btn btn-primary magnetic">View Projects <span>→</span></a>
+          <div class="resume-menu">
+            <button class="btn btn-ghost magnetic" aria-haspopup="true" aria-expanded="false">Download Resume ↓</button>
+            <div class="dropdown" role="menu">
+              <a href="assets/Suraj_Kumar_Resume_AI_ML.pdf" target="_blank" rel="noopener">AI / ML Resume</a>
+              <a href="assets/Suraj_Kumar_Resume_FullStack.pdf" target="_blank" rel="noopener">Full-Stack Resume</a>
+            </div>
+          </div>
+        </div>
+        <div class="socials reveal">
+          <a href="https://github.com/suraj-kumar123rs" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.2-3.1-.1-.4-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.7 1.7.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.1 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/suraj-kumar-rs/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2ZM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2ZM7.1 20.5H3.5V9h3.6v11.5ZM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0Z"/></svg>
+          </a>
+          <a href="https://huggingface.co/spaces/surajkumar223" target="_blank" rel="noopener" aria-label="HuggingFace" class="hf">🤗</a>
+          <a href="mailto:surajkumar805122@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2.3-.5 7.7 6.2L19.7 5H4.3ZM20 6.9l-7.4 6a1 1 0 0 1-1.2 0L4 6.9v11.6c0 .3.2.5.5.5h15c.3 0 .5-.2.5-.5V6.9Z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="orbit-wrap" id="tiltPhoto">
+          <div class="ring ring-1"></div>
+          <div class="ring ring-2"></div>
+          <div class="ring ring-3"><span class="sat s1"></span><span class="sat s2"></span></div>
+          <div class="photo">
+            <img src="assets/profile.jpg" alt="Suraj Kumar" width="560" height="560" />
+            <div class="scanline"></div>
+          </div>
+          <div class="float-tag t1"><span class="c-acc">●</span> PyTorch</div>
+          <div class="float-tag t2"><span class="c-vio">●</span> Transformers</div>
+          <div class="float-tag t3"><span class="c-pink">●</span> RAG · LLMs</div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-hint" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+      <div class="stat reveal"><b class="count" data-to="0.825" data-dec="3">0</b><span>Macro F1 · audio genre classifier (Kaggle LB)</span></div>
+      <div class="stat reveal"><b class="count" data-to="3">0</b><span>Live deployments · HF Spaces, Streamlit, Netlify</span></div>
+      <div class="stat reveal"><b class="count" data-to="5">0</b><span>Shipped ML &amp; full-stack projects</span></div>
+      <div class="stat reveal"><b class="count" data-to="7.3" data-dec="1">0</b><span>CGPA · BS Data Science, IIT Madras</span></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="section-head reveal">
+        <span class="sec-num">01</span>
+        <h2>About <span class="grad">me</span></h2>
+        <div class="line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm a BS Data Science &amp; Applications student at <strong>IIT Madras</strong>, with a completed BSc in
+            Chemistry behind me. I like problems where the model is only half the job — getting the data right,
+            measuring honestly, and putting the result in front of real users.
+          </p>
+          <p>
+            My recent work: fine-tuning an AudioSet-pretrained <strong>Audio Spectrogram Transformer</strong> to a
+            0.825 macro F1 on a noisy, stem-mixed genre dataset, building a <strong>RAG chatbot</strong> for PDFs,
+            and shipping full-stack apps with Vue, Flask, Celery and Docker.
+          </p>
+          <p>
+            Outside ML, I do <strong>cybersecurity research and bug bounty hunting</strong>, which taught me to think about
+            how systems break, not just how they work.
+          </p>
+          <p class="c-acc mono">→ Currently looking for AI/ML internships.</p>
+        </div>
+
+        <div class="terminal reveal" id="terminal">
+          <div class="term-bar"><span></span><span></span><span></span><em>suraj.json</em></div>
+          <pre class="term-body" id="termBody"></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="section-head reveal">
+        <span class="sec-num">02</span>
+        <h2>Tech <span class="grad">stack</span></h2>
+        <div class="line"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card glass reveal tilt">
+          <div class="skill-icon">🧠</div>
+          <h3>Machine Learning &amp; AI</h3>
+          <div class="chips"><span>PyTorch</span><span>Scikit-learn</span><span>HuggingFace Transformers</span><span>XGBoost</span><span>RAG Pipelines</span><span>FAISS</span><span>Groq / Llama</span></div>
+        </div>
+        <div class="skill-card glass reveal tilt">
+          <div class="skill-icon">🔬</div>
+          <h3>Deep Learning</h3>
+          <div class="chips"><span>CNN</span><span>RNN / LSTM</span><span>Transformers</span><span>AST</span><span>Ensembles</span><span>Test-Time Augmentation</span><span>Weights &amp; Biases</span></div>
+        </div>
+        <div class="skill-card glass reveal tilt">
+          <div class="skill-icon">🎧</div>
+          <h3>NLP &amp; Audio</h3>
+          <div class="chips"><span>TF-IDF</span><span>Sentence Embeddings</span><span>Text Classification</span><span>Mel Spectrograms</span><span>MFCC</span><span>librosa</span></div>
+        </div>
+        <div class="skill-card glass reveal tilt">
+          <div class="skill-icon">⚙️</div>
+          <h3>Full-Stack</h3>
+          <div class="chips"><span>Vue.js</span><span>Flask</span><span>REST APIs</span><span>JWT Auth</span><span>SQLAlchemy</span><span>Celery</span><span>Redis</span><span>Jinja2</span></div>
+        </div>
+        <div class="skill-card glass reveal tilt">
+          <div class="skill-icon">🚀</div>
+          <h3>Tools &amp; Deploy</h3>
+          <div class="chips"><span>Python</span><span>SQL</span><span>JavaScript</span><span>Git / GitHub</span><span>Docker</span><span>Linux / Bash</span><span>Gradio</span><span>Streamlit</span><span>HF Spaces</span><span>Kaggle</span></div>
+        </div>
+        <div class="skill-card glass reveal tilt sec-card">
+          <div class="skill-icon">🛡️</div>
+          <h3>Security</h3>
+          <div class="chips"><span>Cybersecurity Researcher</span><span>Bug Bounty Hunter</span><span>Web App Security</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="section-head reveal">
+        <span class="sec-num">03</span>
+        <h2>Featured <span class="grad">projects</span></h2>
+        <div class="line"></div>
+      </div>
+
+      <div class="filters reveal" role="tablist">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="ml">AI / ML</button>
+        <button class="filter" data-filter="web">Full-Stack</button>
+      </div>
+
+      <div class="projects">
+        <!-- Music genre -->
+        <article class="project glass featured reveal" data-cat="ml">
+          <div class="p-visual viz-audio" aria-hidden="true">
+            <div class="eq"></div>
+            <div class="p-metric"><b>0.825</b><span>macro F1</span></div>
+          </div>
+          <div class="p-body">
+            <div class="p-meta"><span class="tag tag-ml">Deep Learning · Audio</span><span class="p-date">Jan 2026</span></div>
+            <h3>Music Genre Classification <em>— Messy Mashup</em></h3>
+            <p class="p-sub">IIT Madras DL &amp; GenAI Kaggle competition</p>
+            <ul>
+              <li>Benchmarked a CNN and a 2-layer LSTM trained from scratch on log-Mel features (macro F1 ~0.47 / ~0.45), then fine-tuned an AudioSet-pretrained <b>AST</b> for 10 genres — <b>0.825 macro F1</b> on the leaderboard.</li>
+              <li>Generated training data on the fly by mixing stems from 1–4 songs and injecting ESC-50 noise; 5-crop test-time augmentation; experiments tracked in W&amp;B.</li>
+              <li>Deployed as a live Gradio app on HuggingFace Spaces.</li>
+            </ul>
+            <div class="stack"><span>PyTorch</span><span>HF Transformers</span><span>librosa</span><span>W&amp;B</span><span>Gradio</span></div>
+            <div class="p-links">
+              <a href="https://huggingface.co/spaces/surajkumar223/music-genre-classifier" target="_blank" rel="noopener" class="lnk lnk-live">Live Demo ↗</a>
+              <a href="https://github.com/suraj-kumar123rs/dl-23f2004929-notebook-t12026" target="_blank" rel="noopener" class="lnk">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PDF RAG -->
+        <article class="project glass reveal tilt" data-cat="ml">
+          <div class="p-visual viz-chat" aria-hidden="true">
+            <div class="bubble b-user">What does section 4 say?</div>
+            <div class="bubble b-bot"><span class="typing"><i></i><i></i><i></i></span></div>
+            <div class="vec-dots"></div>
+          </div>
+          <div class="p-body">
+            <div class="p-meta"><span class="tag tag-ml">LLM · RAG</span><span class="p-date">2025</span></div>
+            <h3>PDF Chatbot — RAG Pipeline</h3>
+            <p class="p-sub">Personal project</p>
+            <ul>
+              <li>Retrieval-Augmented Generation over PDFs: PyMuPDF ingestion, sentence-transformer embeddings, FAISS vector search, Llama on Groq for answers.</li>
+              <li>Multi-document Q&amp;A with context-aware retrieval, served through Streamlit.</li>
+            </ul>
+            <div class="stack"><span>Python</span><span>FAISS</span><span>HF Embeddings</span><span>Groq · Llama</span><span>Streamlit</span></div>
+            <div class="p-links">
+              <a href="https://suraj-kumar123rs-chatbot-pdf-app-nas68t.streamlit.app/" target="_blank" rel="noopener" class="lnk lnk-live">Live Demo ↗</a>
+              <a href="https://github.com/suraj-kumar123rs/chatbot_pdf" target="_blank" rel="noopener" class="lnk">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Comment category -->
+        <article class="project glass reveal tilt" data-cat="ml">
+          <div class="p-visual viz-bars" aria-hidden="true">
+            <div class="bars"><i style="--h:79%"><em>LR</em></i><i style="--h:74%"><em>XGB</em></i><i style="--h:77%"><em>SVM</em></i><i class="win" style="--h:92%"><em>Blend</em></i></div>
+            <div class="p-metric"><b>0.816</b><span>LB macro F1</span></div>
+          </div>
+          <div class="p-body">
+            <div class="p-meta"><span class="tag tag-ml">NLP · Classical ML</span><span class="p-date">2025</span></div>
+            <h3>Comment Category Prediction</h3>
+            <p class="p-sub">IIT Madras ML Kaggle competition</p>
+            <ul>
+              <li>4-class comment classifier: text cleaning, EDA, TF-IDF (1–2 grams, 30k vocab), balanced class weights, grid-searched Logistic Regression.</li>
+              <li>Probability-averaged LR + XGBoost + Linear SVM lifted validation macro F1 from ~0.79 to <b>0.819</b>; <b>0.816</b> on the leaderboard.</li>
+            </ul>
+            <div class="stack"><span>Python</span><span>Scikit-learn</span><span>XGBoost</span><span>Pandas</span><span>NLP</span></div>
+            <div class="p-links">
+              <a href="https://www.kaggle.com/competitions/comment-category-prediction-challenge" target="_blank" rel="noopener" class="lnk lnk-live">Kaggle ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Parking -->
+        <article class="project glass reveal tilt" data-cat="web">
+          <div class="p-visual viz-park" aria-hidden="true">
+            <div class="slots"><i></i><i class="on"></i><i></i><i class="on"></i><i class="on"></i><i></i><i></i><i class="on"></i><i></i><i class="on"></i><i></i><i></i></div>
+            <div class="p-metric"><b>LIVE</b><span>on Netlify</span></div>
+          </div>
+          <div class="p-body">
+            <div class="p-meta"><span class="tag tag-web">Full-Stack SPA</span><span class="p-date">2025</span></div>
+            <h3>Vehicle Parking Management System</h3>
+            <p class="p-sub">IIT Madras MAD II project</p>
+            <ul>
+              <li>Vue SPA with real-time slot reservation/release, admin revenue analytics, per-lot occupancy charts, and role-based access via Flask-JWT-Extended.</li>
+              <li>Celery + Redis background jobs for daily reminders, monthly reports and CSV export; Dockerised backend.</li>
+            </ul>
+            <div class="stack"><span>Vue.js</span><span>Flask</span><span>JWT</span><span>Celery</span><span>Redis</span><span>Docker</span></div>
+            <div class="p-links">
+              <a href="https://vehiclepark-ease.netlify.app/" target="_blank" rel="noopener" class="lnk lnk-live">Live Demo ↗</a>
+              <a href="https://github.com/suraj-kumar123rs/Vehicle_parking_V2" target="_blank" rel="noopener" class="lnk">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Household -->
+        <article class="project glass reveal tilt" data-cat="web">
+          <div class="p-visual viz-flow" aria-hidden="true">
+            <div class="flow"><span>Customer</span><b></b><span>Booking</span><b></b><span>Pro</span><b></b><span>Review</span></div>
+          </div>
+          <div class="p-body">
+            <div class="p-meta"><span class="tag tag-web">Full-Stack Web App</span><span class="p-date">2024</span></div>
+            <h3>Household Services Platform</h3>
+            <p class="p-sub">IIT Madras MAD I project</p>
+            <ul>
+              <li>Multi-role app (Admin, Customer, Service Professional) with booking workflow, accept/reject flow, post-service reviews and full CRUD.</li>
+            </ul>
+            <div class="stack"><span>Flask</span><span>Jinja2</span><span>Flask-Login</span><span>SQLAlchemy</span><span>SQLite</span></div>
+            <div class="p-links">
+              <a href="https://github.com/suraj-kumar123rs/my_household_app-main" target="_blank" rel="noopener" class="lnk">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- JOURNEY -->
+    <section id="journey" class="section">
+      <div class="section-head reveal">
+        <span class="sec-num">04</span>
+        <h2>Education &amp; <span class="grad">milestones</span></h2>
+        <div class="line"></div>
+      </div>
+      <div class="timeline">
+        <div class="t-item reveal">
+          <div class="t-dot"></div>
+          <div class="t-card glass">
+            <span class="t-date">2023 — Present</span>
+            <h3>BS Data Science &amp; Applications</h3>
+            <p class="t-org">Indian Institute of Technology Madras · CGPA 7.3</p>
+            <div class="chips small"><span>Deep Learning &amp; GenAI</span><span>Machine Learning</span><span>Statistics for DS</span><span>DBMS</span><span>DSA</span><span>App Development I &amp; II</span></div>
+          </div>
+        </div>
+        <div class="t-item reveal">
+          <div class="t-dot"></div>
+          <div class="t-card glass">
+            <span class="t-date">Jan 2026</span>
+            <h3>Diploma in Data Science</h3>
+            <p class="t-org">IIT Madras · certificate awarded</p>
+          </div>
+        </div>
+        <div class="t-item reveal">
+          <div class="t-dot"></div>
+          <div class="t-card glass">
+            <span class="t-date">Ongoing</span>
+            <h3>Kaggle competitor</h3>
+            <p class="t-org">Multiple IIT Madras ML / DL competitions</p>
+          </div>
+        </div>
+        <div class="t-item reveal">
+          <div class="t-dot"></div>
+          <div class="t-card glass">
+            <span class="t-date">Completed</span>
+            <h3>BSc Chemistry</h3>
+            <p class="t-org">Magadh University · 85%</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="contact-card glass reveal">
+        <span class="sec-num">05</span>
+        <h2>Let's build something <span class="grad">intelligent.</span></h2>
+        <p>I'm open to AI/ML internships and interesting ML problems. The fastest way to reach me is email.</p>
+        <div class="contact-actions">
+          <button class="btn btn-primary magnetic" id="copyEmail" data-email="surajkumar805122@gmail.com">
+            <span id="copyLabel">surajkumar805122@gmail.com</span> <small>⧉ copy</small>
+          </button>
+          <a href="tel:+918051950600" class="btn btn-ghost magnetic">+91 80519 50600</a>
+        </div>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/suraj-kumar-rs/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://github.com/suraj-kumar123rs" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="https://huggingface.co/spaces/surajkumar223" target="_blank" rel="noopener">HuggingFace ↗</a>
+          <span class="c-dim">📍 Gaya, Bihar, India</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Designed &amp; built by <b>Suraj Kumar</b> · <a href="mailto:surajkumar805122@gmail.com">surajkumar805122@gmail.com</a></p>
+    <p class="c-dim mono">© <span id="year"></span> · v1.0</p>
+  </footer>
+
+  <div class="toast" id="toast">Email copied ✓</div>
+
+  <script src="main.js"></script>
+</body>
+</html>
