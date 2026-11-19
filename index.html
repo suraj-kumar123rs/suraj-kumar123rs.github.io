@@ -129,7 +129,7 @@
           </p>
           <p>
             My recent work: fine-tuning an AudioSet-pretrained <strong>Audio Spectrogram Transformer</strong> to a
-            0.825 macro F1 on a noisy, stem-mixed genre dataset, building a <strong>RAG chatbot</strong> for PDFs,
+            0.825 macro F1 on a noisy, stem-mixed genre dataset, building a <strong>hybrid-retrieval RAG chatbot</strong> for PDFs with its own eval harness,,
             and shipping full-stack apps with Vue, Flask, Celery and Docker.
           </p>
           <p>
@@ -157,7 +157,7 @@
         <div class="skill-card glass reveal tilt">
           <div class="skill-icon">🧠</div>
           <h3>Machine Learning &amp; AI</h3>
-          <div class="chips"><span>PyTorch</span><span>Scikit-learn</span><span>HuggingFace Transformers</span><span>XGBoost</span><span>RAG Pipelines</span><span>FAISS</span><span>Groq / Llama</span></div>
+          <div class="chips"><span>PyTorch</span><span>Scikit-learn</span><span>HuggingFace Transformers</span><span>XGBoost</span><span>RAG Pipelines</span><span>FAISS</span><span>BM25 Hybrid Search</span><span>Groq LLMs</span></div>
         </div>
         <div class="skill-card glass reveal tilt">
           <div class="skill-icon">🔬</div>
@@ -231,16 +231,17 @@
             <div class="bubble b-user">What does section 4 say?</div>
             <div class="bubble b-bot"><span class="typing"><i></i><i></i><i></i></span></div>
             <div class="vec-dots"></div>
+            <div class="p-metric"><b>0.65</b><span>Hit@3</span></div>
           </div>
           <div class="p-body">
             <div class="p-meta"><span class="tag tag-ml">LLM · RAG</span><span class="p-date">2025</span></div>
             <h3>PDF Chatbot — RAG Pipeline</h3>
             <p class="p-sub">Personal project</p>
             <ul>
-              <li>Retrieval-Augmented Generation over PDFs: PyMuPDF ingestion, sentence-transformer embeddings, FAISS vector search, Llama on Groq for answers.</li>
-              <li>Multi-document Q&amp;A with context-aware retrieval, served through Streamlit.</li>
+              <li>Hybrid retrieval over PDFs: MiniLM embeddings in FAISS plus BM25 keyword search, merged with reciprocal rank fusion; answers from gpt-oss-20b on Groq, served through Streamlit.</li>
+              <li>Built an eval harness on 20 curated questions: hybrid search raised Hit@3 from <b>0.45 to 0.65</b>; doubling chunk size cost 69% more tokens with no retrieval gain.</li>
             </ul>
-            <div class="stack"><span>Python</span><span>FAISS</span><span>HF Embeddings</span><span>Groq · Llama</span><span>Streamlit</span></div>
+            <div class="stack"><span>Python</span><span>FAISS</span><span>BM25</span><span>Groq · gpt-oss</span><span>Streamlit</span></div>
             <div class="p-links">
               <a href="https://suraj-kumar123rs-chatbot-pdf-app-nas68t.streamlit.app/" target="_blank" rel="noopener" class="lnk lnk-live">Live Demo ↗</a>
               <a href="https://github.com/suraj-kumar123rs/chatbot_pdf" target="_blank" rel="noopener" class="lnk">GitHub ↗</a>
